@@ -3,14 +3,14 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Installing dependencies
-      pre_build:
-       commands:
-         - echo Running tests
-         - test -f index.html && echo "index.html exists - TEST PASSED" || exit 1
-      build:
-        commands:
-          - echo "Build successful!"
+      - echo "Installing dependencies..."
+  pre_build:
+    commands:
+      - echo "Running tests..."
+      - test -f index.html && echo "index.html exists - TEST PASSED" || exit 1
+  build:
+    commands:
+      - echo "Build successful!"
 
 artifacts:
   files:
